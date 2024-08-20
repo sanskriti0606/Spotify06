@@ -42,7 +42,7 @@ X-RapidAPI-Host= spotify23.p.rapidapi.com
     export { RAPIDAPI_KEY, RAPIDAPI_HOST };
     ```
 
-    Replace `'your-api-key-here'` with your actual API key.
+    Replace `'73bc937552msh27eaf79d281b2bbp1e52afjsn9a548c143686'` with your actual API key.
 
 ## Running the Application
 

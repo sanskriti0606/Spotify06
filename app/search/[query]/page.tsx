@@ -69,32 +69,32 @@
 // //     </div>
 // //   );
 // // }
-// 'use client';
+'use client';
 
-// import { useRouter } from 'next/router';
-// import React from 'react';
-// import Card from '../../../components/Card';
-// import { useGetSearchAlbumQuery } from '../../../redux/services/rapidapiCore';
-// import Loader from '../../../components/Preloader';
+import { useRouter } from 'next/router';
+import React from 'react';
+import Card from '../../../components/Card';
+import { useGetSearchAlbumQuery } from '../../../redux/services/rapidapiCore';
+import Loader from '../../../components/Preloader';
 
-// export default function SearchPage() {
-//   const router = useRouter();
-//   const { query } = router.query;
+export default function SearchPage() {
+  const router = useRouter();
+  const { query } = router.query;
 
-//   const { data, isFetching, error } = useGetSearchAlbumQuery(query as string);
-//   const albums = data?.albums.items;
+  const { data, isFetching, error } = useGetSearchAlbumQuery(query as string);
+  const albums = data?.albums.items;
 
-//   if (isFetching) return <Loader />;
-//   if (error) return <div>Error occurred</div>;
+  if (isFetching) return <Loader />;
+  if (error) return <div>Error occurred</div>;
 
-//   return (
-//     <div className="bg-black p-6">
-//       <h1 className="text-white text-3xl mb-6">Search Results</h1>
-//       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-//         {albums?.map((album: any, index: number) => (
-//           <Card key={index} item={album} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
+  return (
+    <div className="bg-black p-6">
+      <h1 className="text-white text-3xl mb-6">Search Results</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {albums?.map((album: any, index: number) => (
+          <Card key={index} item={album} />
+        ))}
+      </div>
+    </div>
+  );
+}

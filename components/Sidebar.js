@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {
-  HiHome,
-  HiSearch,
-  HiLibrary,
-  HiPlusCircle,
-  HiHeart,
-  HiMenu,
-  HiX,
-} from 'react-icons/hi';
+import { HiHome, HiSearch, HiLibrary, HiPlusCircle, HiHeart, HiMenu, HiX } from 'react-icons/hi';
 import Image from 'next/image';
 import styles from '../app/Sidebar.module.css';
 

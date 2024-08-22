@@ -5,7 +5,7 @@ import Search from "./Search"; // Ensure path is correct
 const Header = () => {
   return (
     <nav className="bg-black p-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between flex-wrap">
         {/* Logo Section */}
         <Link href="/">
           <img
@@ -16,12 +16,12 @@ const Header = () => {
         </Link>
 
         {/* Search Bar */}
-        <div className="flex-1 mx-6">
+        <div className="flex-1 mx-3 flex justify-center">
           <Search />
         </div>
 
         {/* Navigation Links */}
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-4 items-center flex-wrap mt-4 md:mt-0">
           <Link
             href="/premium"
             className="text-gray-300 text-sm hover:text-white transition-colors duration-300"

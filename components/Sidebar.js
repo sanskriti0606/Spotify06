@@ -32,11 +32,11 @@ const Sidebar = () => {
           <div className={styles.logo}>
             <Link href="/">
               <Image
-                src="/logo1.png"  // Path to your logo image
+                src="/logo1.png"  
                 alt="Spotify"
-                width={100}        // Set appropriate width
-                height={30}        // Set appropriate height
-                layout="intrinsic" // Use intrinsic layout for fixed-size images
+                width={100}        
+                height={30}        
+                layout="intrinsic" 
               />
             </Link>
           </div>

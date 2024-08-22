@@ -13,12 +13,10 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Toggle Button for Small Screens */}
       <button className="md:hidden p-2" onClick={toggleSidebar}>
         {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
       </button>
 
-      {/* Sidebar */}
       <div className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ''}`}>
         <div className={styles.sidebarNav}>
           <div className={styles.logo}>

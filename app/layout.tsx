@@ -1,8 +1,9 @@
 "use client";
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar"; 
+import Sidebar from "../components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 import { store } from '../redux/store';
 import { Provider } from 'react-redux';
@@ -15,10 +16,10 @@ export default function RootLayout({
   return (
     <Provider store={store}>
       <html lang="en">
-      <body className={inter.className}>
-          <div className="flex">
+        <body className={inter.className}>
+          <div className="flex flex-col md:flex-row">
             <Sidebar />
-            <main className="flex-1 ml-64">
+            <main className="flex-1 ml-0 md:ml-64">
               <Header />
               {children}
             </main>

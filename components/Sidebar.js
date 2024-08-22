@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { HiHome, HiSearch, HiLibrary, HiPlusCircle, HiHeart, HiMenu, HiX } from 'react-icons/hi';
+import {
+  HiHome,
+  HiSearch,
+  HiLibrary,
+  HiPlusCircle,
+  HiHeart,
+  HiMenu,
+  HiX
+} from 'react-icons/hi';
 import Image from 'next/image';
 import styles from '../app/Sidebar.module.css';
 
@@ -13,10 +21,12 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* Toggle Button for Small Screens */}
       <button className="md:hidden p-2" onClick={toggleSidebar}>
         {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
       </button>
 
+      {/* Sidebar */}
       <div className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ''}`}>
         <div className={styles.sidebarNav}>
           <div className={styles.logo}>
@@ -24,8 +34,8 @@ const Sidebar = () => {
               <Image
                 src="/logo1.png"  
                 alt="Spotify"
-                width={100}        
-                height={30}        
+                width={100}       
+                height={30}       
                 layout="intrinsic" 
               />
             </Link>
@@ -69,7 +79,7 @@ const Sidebar = () => {
           <div className={styles.sidebarScroll}>
             <div className={styles.createPlaylist}>
               <h4>Create your playlist</h4>
-              <p>It's easy, we'll help you</p>
+              <p>It&apos;s easy, we&apos;ll help you</p>
               <button>Create Playlist</button>
             </div>
           </div>
